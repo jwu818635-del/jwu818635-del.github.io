@@ -1,18 +1,22 @@
 name: Deploy GitHub Pages
 
+
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
+
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
+
 
 jobs:
   deploy:
@@ -25,7 +29,7 @@ jobs:
       - name: Unpack static website
         run: |
           mkdir -p site
-          unzip -q sinoma-chizhou-github-pages-package-v2.zip -d site
+          unzip -q sinoma-chizhou-github-pages-package-v3.zip -d site
           rm -rf site/.git
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
@@ -33,3 +37,4 @@ jobs:
           path: site
       - id: deployment
         uses: actions/deploy-pages@v4
+

@@ -29,7 +29,7 @@ jobs:
       - name: Unpack static website
         run: |
           mkdir -p site
-          unzip -q sinoma-chizhou-github-pages-package-v4.zip -d site
+          unzip -q sinoma-chizhou-github-pages-package-v5.zip -d site
           rm -rf site/.git
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

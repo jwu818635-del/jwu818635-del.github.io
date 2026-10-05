@@ -31,7 +31,7 @@ jobs:
           mkdir -p site
           unzip -q sinoma-chizhou-github-pages-package-v8.zip -d site
           rm -rf site/.git
-          cp -f robots.txt sitemap.xml site/ 2>/dev/null || true
+          cp -f robots.txt sitemap.xml google8d6f1dd4a80bb511.html site/ 2>/dev/null || true
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
